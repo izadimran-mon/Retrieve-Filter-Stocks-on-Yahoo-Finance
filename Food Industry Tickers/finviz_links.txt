@@ -1,0 +1,8 @@
+https://finviz.com/screener.ashx?v=111&f=ind_beveragesnonalcoholic
+https://finviz.com/screener.ashx?v=111&f=ind_beveragesbrewers
+https://finviz.com/screener.ashx?v=111&f=ind_beverageswineriesdistilleries
+https://finviz.com/screener.ashx?v=111&f=ind_fooddistribution
+https://finviz.com/screener.ashx?v=111&f=ind_farmproducts
+https://finviz.com/screener.ashx?v=111&f=ind_grocerystores
+https://finviz.com/screener.ashx?v=111&f=ind_packagedfoods
+https://finviz.com/screener.ashx?v=111&f=ind_restaurants
