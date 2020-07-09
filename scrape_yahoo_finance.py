@@ -15,7 +15,7 @@ import time
 
 def retrieve_industry_companies(folder):
     companies = []
-    path = "/Users/izadi/Downloads/Scrape Stocks/" + folder
+    path = "/Users/izadi/Downloads/Retrieve Filter Stocks on Yahoo Finance/" + folder
     for filename in glob.glob(os.path.join(path, '*.txt')):
         if 'finviz_links.txt' not in filename:
             with open(filename, 'r') as f:
@@ -39,6 +39,9 @@ def parse(ticker, current_price=True, market_cap=True, profit_margin=True, debt_
         """ DATA RETRIEVAL """
         json_loaded_summary = json.loads(summary_json_response.text)
         summary = json_loaded_summary["quoteSummary"]["result"][0]
+
+        # print(summary)
+
         summary_detail_module = summary['summaryDetail']
         financial_data_module = summary['financialData']
 
@@ -210,7 +213,12 @@ def filter(dataset):
 
 
 def main():
-    companies = retrieve_industry_companies("Food Industry Tickers")
+    industry = {}
+    industry['banks'] = "Bank Industry Tickers"
+    industry['food/beverage'] = "Food Industry Tickers"
+    industry['property'] = "Property Industry Tickers"
+
+    companies = retrieve_industry_companies(industry['banks'])
     print(companies)
     buy = []
 
@@ -240,6 +248,6 @@ def main():
 
 main()
 
-# lol = parse('3182.KL')
+# lol = parse('AAPL')
 # loll = filter(lol)
 # print(lol['market_cap'])
